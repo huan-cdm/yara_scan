@@ -1,14 +1,67 @@
 s_rule C:\Users\101201905004\Desktop\yara_scan\target_file\test\s.exe
+0x0:$hex0: 4D 5A
+0x3806:$str0: s.exe
+0xf2c:$str1: TCP Port Scanner V1.2 By WinEggDrop
+0x4f4:$str2: /HBanner
+0xf10:$str2: /HBanner
+0xcc4:$str3: SYN Scan: About To Scan %u IP For %u Ports Using %d Thread
+0xd04:$str3: SYN Scan: About To Scan %u IP For %u Ports Using %d Thread
+0xdcc:$str4: No Port To Scan
 
 webshell_rule C:\Users\101201905004\Desktop\codetest\java_test\Calculator.java
+0x64:$str1: exec(
 webshell_rule C:\Users\101201905004\Desktop\codetest\java_test\test.java
+0xb6:$str1: exec(
 webshell_rule C:\Users\101201905004\Desktop\ProxyPool\.git\hooks\fsmonitor-watchman.sample
+0x3cc:$str4: eval
+0x1110:$str4: eval
 webshell_rule C:\Users\101201905004\Desktop\ProxyPool\.git\hooks\pre-receive.sample
+0x16a:$str4: eval
+webshell_rule C:\Users\101201905004\Desktop\yara_scan\.git\hooks\pre-receive.sample
+0x16a:$str4: eval
+webshell_rule C:\Users\101201905004\Desktop\yara_scan\.git\hooks\fsmonitor-watchman.sample
+0x3cc:$str4: eval
+0x1110:$str4: eval
 webshell_rule C:\Users\101201905004\Desktop\yara_scan\rule_file\webshell_rule.yara
+0x7a:$str1: exec(
+0x8c:$str2: add_url_rule
+0xa5:$str3: Code By Ninty
+0xbf:$str4: eval
 webshell_rule C:\Users\101201905004\Desktop\yara_scan\target_file\JspSpy.jsp
+0x21a0:$str1: exec(
+0xd58a:$str1: exec(
+0xd723:$str1: exec(
+0x1254a:$str1: exec(
+0x1454b:$str1: exec(
+0x24a:$str3: Code By Ninty
 webshell_rule C:\Users\101201905004\Desktop\yara_scan\target_file\best_php_shell.php
-webshell_rule C:\Users\101201905004\Desktop\图片\aspyijuhua.asp
+0x11f0b:$str1: exec(
+0x11f69:$str1: exec(
+0x12131:$str1: exec(
+0x12d89:$str1: exec(
+0x12ddc:$str1: exec(
+0x15270:$str1: exec(
+0x15314:$str1: exec(
+0x1692d:$str1: exec(
+0x1df:$str4: eval
+0x74b2:$str4: eval
+0xd478:$str4: eval
+0xdbda:$str4: eval
+0xdd92:$str4: eval
+0x13be6:$str4: eval
+0x15268:$str4: eval
+0x152d9:$str4: eval
+0x2328c:$str4: eval
 webshell_rule C:\Users\101201905004\Desktop\图片\phpyijuhua.php
-webshell_rule C:\Users\101201905004\Desktop\yara_scan\yara_engine\yara64.exe
+0x6:$str4: eval
+webshell_rule C:\Users\101201905004\Desktop\图片\aspyijuhua.asp
+0x2:$str4: eval
 webshell_rule C:\Users\101201905004\Desktop\ProxyPool\Gofreeproxy.exe
+0x2ff70c:$str4: eval
+0x3bb1f5:$str4: eval
+0x3cff75:$str4: eval
+0x3d026e:$str4: eval
+0x7794ba:$str4: eval
+webshell_rule C:\Users\101201905004\Desktop\yara_scan\yara_engine\yara64.exe
+0x210b35:$str4: eval
 

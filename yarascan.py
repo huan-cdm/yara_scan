@@ -8,6 +8,7 @@ import time
 from config import linux_rule_dir
 from config import linux_sample_dir
 from config import win_sample_dir
+from config import mode
 
 
 def lin_file_list():
@@ -28,9 +29,17 @@ def win():
     print("运行在windows系统")
     win_result_list = []
     win_rule_file = lin_file_list()
+
     for a in tqdm(win_rule_file,desc="样本扫描"):
         time.sleep(0.1)
-        win_result = os.popen('.\\yara_engine\\yara64.exe'+' '+a+' '+win_sample_dir+' '+'-r').read()
+
+        if int(mode) == 0:
+            win_result = os.popen('.\\yara_engine\\yara64.exe'+' '+a+' '+win_sample_dir+' '+'-r').read()
+        elif int(mode) ==1:
+            win_result = os.popen('.\\yara_engine\\yara64.exe'+' '+a+' '+win_sample_dir+' '+'-r'+' '+'-s').read()
+        else:
+            print("配置文件mode字段只允许0/1")
+
         win_result_list.append(win_result)
 
     #清空列表中为空的数据
@@ -41,7 +50,6 @@ def win():
             new_result_list.append(c)
             print(c)
 
-    #print(win_result_list)
     f2 = open(file='.\\result\\result_file.txt', mode='w')
     for d in tqdm(new_result_list,desc="结果存入到文件"):
         f2.write(str(d)+"\n")
@@ -56,7 +64,13 @@ def lin():
     linux_rule_file = lin_file_list()
     for i in tqdm(linux_rule_file,desc="样本扫描"):
         time.sleep(0.1)
-        result = os.popen('yara'+' '+i+' '+linux_sample_dir+' '+'-r').read()
+        if int(mode) == 0:
+            result = os.popen('yara'+' '+i+' '+linux_sample_dir+' '+'-r').read()
+        elif int(mode) ==1:
+            result = os.popen('yara'+' '+i+' '+linux_sample_dir+' '+'-r'+' '+'-s').read()
+        else:
+            print("配置文件mode字段只允许0/1")
+
         result_list.append(result)
 
     #清空列表中为空的数据
