@@ -1,0 +1,14 @@
+s_rule C:\Users\101201905004\Desktop\yara_scan\target_file\test\s.exe
+
+webshell_rule C:\Users\101201905004\Desktop\codetest\java_test\Calculator.java
+webshell_rule C:\Users\101201905004\Desktop\codetest\java_test\test.java
+webshell_rule C:\Users\101201905004\Desktop\ProxyPool\.git\hooks\fsmonitor-watchman.sample
+webshell_rule C:\Users\101201905004\Desktop\ProxyPool\.git\hooks\pre-receive.sample
+webshell_rule C:\Users\101201905004\Desktop\yara_scan\rule_file\webshell_rule.yara
+webshell_rule C:\Users\101201905004\Desktop\yara_scan\target_file\JspSpy.jsp
+webshell_rule C:\Users\101201905004\Desktop\yara_scan\target_file\best_php_shell.php
+webshell_rule C:\Users\101201905004\Desktop\图片\aspyijuhua.asp
+webshell_rule C:\Users\101201905004\Desktop\图片\phpyijuhua.php
+webshell_rule C:\Users\101201905004\Desktop\yara_scan\yara_engine\yara64.exe
+webshell_rule C:\Users\101201905004\Desktop\ProxyPool\Gofreeproxy.exe
+
