@@ -5,10 +5,15 @@ import sys
 import os
 from tqdm import tqdm
 import time
+import psutil
 from config import linux_rule_dir
 from config import linux_sample_dir
 from config import win_sample_dir
 from config import mode
+from config import fileormemory
+
+
+
 
 
 def lin_file_list():
@@ -86,6 +91,15 @@ def lin():
         f1.write(str(l)+"\n")
         time.sleep(0.3)
     f1.close()
+
+
+
+#遍历win系统进行PID存到列表
+def win_pid():
+    win_pid_list = []
+    for process in psutil.process_iter(attrs=['pid']):
+        win_pid_list.append(process.info['pid'])
+    return win_pid_list
     
             
        
@@ -93,9 +107,17 @@ def lin():
 
 #程序执行入口
 if __name__ == "__main__":
-    if sys.platform.startswith('linux'):
-        lin()
-    elif sys.platform.startswith('win'):
-        win()
+    if int(fileormemory) == 0:
+        print("程序正在进行内存扫描......")
+        pid = win_pid()
+        print(pid)
+    elif int(fileormemory) == 1:
+        print("程序正在进行文件扫描......")
+        if sys.platform.startswith('linux'):
+            lin()
+        elif sys.platform.startswith('win'):
+            win()
+        else:
+            print("python运行在其他操作系统上")
     else:
-        print("python运行在其他操作系统上")
+        print("配置文件fileormemory字段只允许0/1")
