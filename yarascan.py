@@ -171,7 +171,7 @@ def win_memory():
 	for d in tqdm(memory_new_list,desc="结果存入到文件"):
 		f3.write(str(d)+"\n")
 		time.sleep(0.3)
-		f3.close()
+	f3.close()
             
        
 
