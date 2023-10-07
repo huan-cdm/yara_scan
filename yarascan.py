@@ -124,7 +124,7 @@ def win_pid():
 
         try:
             process_info = psutil.Process(process)
-            if process_info.name() == 'python.exe' or process_info.name() == 'java.exe' or process_info.name() == 'php.exe':
+            if process_info.name() == 'python.exe' or process_info.name() == 'java.exe' or process_info.name() == 'php-cgi.exe':
             	win_pid_list.append(process)
           
         except psutil.NoSuchProcess:
@@ -185,7 +185,7 @@ if __name__ == "__main__":
 
         print("程序正在进行内存扫描......")
         if sys.platform.startswith('linux'):
-        	print("linux")
+        	print("暂不支持linux平台内存扫描")
         elif sys.platform.startswith('win'):
             win_memory()
         else:

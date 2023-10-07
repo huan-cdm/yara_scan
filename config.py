@@ -29,7 +29,7 @@ win_sample_dir = "C:\\Users\\101201905004\\Desktop"
 #是否打印字符串
 #不打印 value=0
 #打印 value=1
-mode=0
+mode=1
 
 
 #配置内存扫描和文件扫描
