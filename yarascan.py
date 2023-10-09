@@ -12,6 +12,7 @@ from config import win_sample_dir
 from config import mode
 from config import fileormemory
 from config import memory_rule_dir
+from config import scan_result
 
 
 
@@ -73,7 +74,7 @@ def win():
             new_result_list.append(c)
             print(c)
 
-    f2 = open(file='.\\result\\result_file.txt', mode='w')
+    f2 = open(file=scan_result, mode='w')
     for d in tqdm(new_result_list,desc="结果存入到文件"):
         f2.write(str(d)+"\n")
         time.sleep(0.3)
@@ -106,7 +107,7 @@ def lin():
             new_result_list.append(j)
             print(j)
     
-    f1 = open(file='./result/result_file.txt', mode='w')
+    f1 = open(file=scan_result, mode='w')
     for l in tqdm(new_result_list,desc="结果存入到文件"):
         f1.write(str(l)+"\n")
         time.sleep(0.3)
@@ -145,9 +146,9 @@ def win_memory():
 	memory_pid = win_pid()
 	#定义扫描结果列表
 	memory_list = []
-	for mi in tqdm(memory_rule_file,desc="遍历内存扫描规则"):
+	for mi in tqdm(memory_rule_file,desc="遍历所有内存扫描相关规则"):
 		time.sleep(0.1)
-		for mj in tqdm(memory_pid,desc="遍历java、python、php进程ID"):
+		for mj in tqdm(memory_pid,desc="提取java,python,php进程进行扫描"):
 			time.sleep(0.1)
 			#判断是否打印字符串
 			if int(mode) == 0:
@@ -167,7 +168,7 @@ def win_memory():
 			memory_new_list.append(ma)
 			print(ma)
 
-	f3 = open(file='.\\result\\result_file.txt', mode='w')
+	f3 = open(file=scan_result, mode='w')
 	for d in tqdm(memory_new_list,desc="结果存入到文件"):
 		f3.write(str(d)+"\n")
 		time.sleep(0.3)

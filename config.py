@@ -22,6 +22,12 @@ win_sample_dir = "C:\\Users\\101201905004\\Desktop"
 
 
 
+#扫描结果文件路径
+scan_result = "./result/resultfile.txt"
+
+
+
+
 
 
 
@@ -29,7 +35,7 @@ win_sample_dir = "C:\\Users\\101201905004\\Desktop"
 #是否打印字符串
 #不打印 value=0
 #打印 value=1
-mode=1
+mode=0
 
 
 #配置内存扫描和文件扫描
