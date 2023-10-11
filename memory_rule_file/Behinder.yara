@@ -1,9 +1,11 @@
-rule java_memory
+rule Behinder
 {
 	meta:
-		tag = "java_memory"
+	
+		tag = "Behinder"
 		description = "冰蝎内存马检测规则"
 		author = "huan666"
+
 	strings:
 		$str1 = "ProcessBuilder"
 		$str2 = "Runtime"
