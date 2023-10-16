@@ -29,7 +29,7 @@ scan_result = "./result/resultfile.txt"
 #是否打印字符串
 #不打印 value=0
 #打印 value=1
-mode=0
+mode=1
 
 
 
