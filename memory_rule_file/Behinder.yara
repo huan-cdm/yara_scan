@@ -10,7 +10,7 @@ rule Behinder
 		$str1 = "ProcessBuilder"
 		$str2 = "Runtime"
 		$str3 = "Instrument"
-		$str4 = "Injected Successfully"
+		$str4 = "Agent Injected Successfully"
 		$str5 = "HttpSessionBindingListener"
 		$str6 = "reflect/Constructor"
 		
