@@ -17,7 +17,7 @@ linux_sample_dir = "./target_file"
 
 #windows系统样本文件目录
 #win_sample_dir = ".\\target_file"
-win_sample_dir = "C:\\Users\\101201905004\\Desktop"
+win_sample_dir = "C:\\Users\\101201905004\\Desktop\\file"
 
 
 
